@@ -2,139 +2,50 @@
   "products": [
     {
       "id": 1,
-      "name": "Torno CNC Industrial",
-      "description": "Torno de control numérico de alta precisión para fabricación industrial. Incluye sistema de refrigeración y herramientas de corte.",
-      "image": "fas fa-cog",
-      "hasMultipleImages": true,
-      "images": [
-        {
-          "base64": "https://via.placeholder.com/400x300/007bff/ffffff?text=Torno+CNC+Vista+Frontal",
-          "name": "Torno CNC - Vista Frontal"
-        },
-        {
-          "base64": "https://via.placeholder.com/400x300/28a745/ffffff?text=Torno+CNC+Vista+Lateral",
-          "name": "Torno CNC - Vista Lateral"
-        },
-        {
-          "base64": "https://via.placeholder.com/400x300/ff9800/ffffff?text=Torno+CNC+Vista+Superior",
-          "name": "Torno CNC - Vista Superior"
-        }
-      ],
+      "name": "Wpc interior nogal con fondo negro",
+      "description": "WPC (Wood Plastic Composite) para uso interior con acabado nogal y fondo negro. Material resistente y duradero ideal para revestimientos interiores.",
+      "image": "fas fa-home",
       "specifications": {
-        "Capacidad": "500mm x 1000mm",
-        "Precisión": "±0.01mm",
-        "Potencia": "15kW",
-        "Peso": "2500kg"
+        "Tipo": "WPC Interior",
+        "Acabado": "Nogal con fondo negro",
+        "Uso": "Interior",
+        "Material": "Wood Plastic Composite"
       }
     },
     {
       "id": 2,
-      "name": "Fresadora Universal",
-      "description": "Fresadora de 5 ejes con mesa de trabajo amplia y sistema de control avanzado para operaciones complejas.",
-      "image": "fas fa-cogs",
-      "hasMultipleImages": true,
-      "images": [
-        {
-          "base64": "https://via.placeholder.com/400x300/dc3545/ffffff?text=Fresadora+Vista+Principal",
-          "name": "Fresadora - Vista Principal"
-        },
-        {
-          "base64": "https://via.placeholder.com/400x300/17a2b8/ffffff?text=Fresadora+Mesa+de+Trabajo",
-          "name": "Fresadora - Mesa de Trabajo"
-        }
-      ],
+      "name": "Wpc interior negro",
+      "description": "WPC (Wood Plastic Composite) para uso interior en color negro. Perfecto para revestimientos interiores modernos y elegantes.",
+      "image": "fas fa-home",
       "specifications": {
-        "Mesa": "1200mm x 300mm",
-        "Ejes": "5 ejes controlados",
-        "Velocidad": "6000 RPM",
-        "Peso": "1800kg"
+        "Tipo": "WPC Interior",
+        "Color": "Negro",
+        "Uso": "Interior",
+        "Material": "Wood Plastic Composite"
       }
     },
     {
       "id": 3,
-      "name": "Taladro de Columna",
-      "description": "Taladro industrial de columna con mesa ajustable y sistema de transmisión por engranajes.",
-      "image": "fas fa-drill",
+      "name": "Wpc exterior negro",
+      "description": "WPC (Wood Plastic Composite) para uso exterior en color negro. Resistente a la intemperie y perfecto para fachadas y revestimientos exteriores.",
+      "image": "fas fa-building",
       "specifications": {
-        "Capacidad": "32mm",
-        "Altura": "1200mm",
-        "Potencia": "2.2kW",
-        "Peso": "450kg"
+        "Tipo": "WPC Exterior",
+        "Color": "Negro",
+        "Uso": "Exterior",
+        "Material": "Wood Plastic Composite"
       }
     },
     {
       "id": 4,
-      "name": "Set de Herramientas Profesionales",
-      "description": "Set completo de herramientas de mano para mecánica industrial, incluye 150 piezas de alta calidad.",
-      "image": "fas fa-tools",
+      "name": "Wpc exterior nogal oscuro",
+      "description": "WPC (Wood Plastic Composite) para uso exterior con acabado nogal oscuro. Ideal para fachadas y revestimientos exteriores con apariencia de madera natural.",
+      "image": "fas fa-building",
       "specifications": {
-        "Piezas": "150 herramientas",
-        "Material": "Acero cromado",
-        "Estuche": "Maletín resistente",
-        "Garantía": "2 años"
-      }
-    },
-    {
-      "id": 5,
-      "name": "Compresor de Aire Industrial",
-      "description": "Compresor de aire de dos etapas con tanque de 500 litros y motor de 10HP para uso industrial intensivo.",
-      "image": "fas fa-wind",
-      "specifications": {
-        "Capacidad": "500 litros",
-        "Potencia": "10HP",
-        "Presión": "150 PSI",
-        "Consumo": "7.5kW"
-      }
-    },
-    {
-      "id": 6,
-      "name": "Soldadora TIG Inverter",
-      "description": "Soldadora TIG de alta frecuencia con control digital y múltiples funciones para soldadura de precisión.",
-      "image": "fas fa-fire",
-      "hasMultipleImages": true,
-      "images": [
-        {
-          "base64": "https://via.placeholder.com/400x300/fd7e14/ffffff?text=Soldadora+TIG+Principal",
-          "name": "Soldadora - Vista Principal"
-        },
-        {
-          "base64": "https://via.placeholder.com/400x300/e83e8c/ffffff?text=Soldadora+Panel+Control",
-          "name": "Soldadora - Panel de Control"
-        },
-        {
-          "base64": "https://via.placeholder.com/400x300/6c757d/ffffff?text=Soldadora+Accesorios",
-          "name": "Soldadora - Accesorios"
-        }
-      ],
-      "specifications": {
-        "Corriente": "200A",
-        "Frecuencia": "50-60Hz",
-        "Peso": "8kg",
-        "Garantía": "3 años"
-      }
-    },
-    {
-      "id": 7,
-      "name": "Bomba Hidráulica Industrial",
-      "description": "Bomba hidráulica de engranajes con alta eficiencia y bajo nivel de ruido para sistemas hidráulicos.",
-      "image": "fas fa-tint",
-      "specifications": {
-        "Flujo": "50 L/min",
-        "Presión": "250 bar",
-        "Potencia": "5.5kW",
-        "Peso": "45kg"
-      }
-    },
-    {
-      "id": 8,
-      "name": "Rodamientos de Precisión",
-      "description": "Set de rodamientos de bolas de alta precisión para aplicaciones industriales críticas.",
-      "image": "fas fa-circle",
-      "specifications": {
-        "Tipo": "Rodamiento de bolas",
-        "Precisión": "P5",
-        "Material": "Acero inoxidable",
-        "Cantidad": "10 unidades"
+        "Tipo": "WPC Exterior",
+        "Acabado": "Nogal oscuro",
+        "Uso": "Exterior",
+        "Material": "Wood Plastic Composite"
       }
     }
   ],
