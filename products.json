@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "products": [
     {
@@ -52,59 +51,4 @@
   ],
   "lastUpdated": "2024-01-15T10:30:00Z",
   "version": "1.0.0"
-=======
-{
-  "products": [
-    {
-      "id": 1,
-      "name": "Wpc interior nogal con fondo negro",
-      "description": "WPC (Wood Plastic Composite) para uso interior con acabado nogal y fondo negro. Material resistente y duradero ideal para revestimientos interiores.",
-      "image": "fas fa-home",
-      "specifications": {
-        "Tipo": "WPC Interior",
-        "Acabado": "Nogal con fondo negro",
-        "Uso": "Interior",
-        "Material": "Wood Plastic Composite"
-      }
-    },
-    {
-      "id": 2,
-      "name": "Wpc interior negro",
-      "description": "WPC (Wood Plastic Composite) para uso interior en color negro. Perfecto para revestimientos interiores modernos y elegantes.",
-      "image": "fas fa-home",
-      "specifications": {
-        "Tipo": "WPC Interior",
-        "Color": "Negro",
-        "Uso": "Interior",
-        "Material": "Wood Plastic Composite"
-      }
-    },
-    {
-      "id": 3,
-      "name": "Wpc exterior negro",
-      "description": "WPC (Wood Plastic Composite) para uso exterior en color negro. Resistente a la intemperie y perfecto para fachadas y revestimientos exteriores.",
-      "image": "fas fa-building",
-      "specifications": {
-        "Tipo": "WPC Exterior",
-        "Color": "Negro",
-        "Uso": "Exterior",
-        "Material": "Wood Plastic Composite"
-      }
-    },
-    {
-      "id": 4,
-      "name": "Wpc exterior nogal oscuro",
-      "description": "WPC (Wood Plastic Composite) para uso exterior con acabado nogal oscuro. Ideal para fachadas y revestimientos exteriores con apariencia de madera natural.",
-      "image": "fas fa-building",
-      "specifications": {
-        "Tipo": "WPC Exterior",
-        "Acabado": "Nogal oscuro",
-        "Uso": "Exterior",
-        "Material": "Wood Plastic Composite"
-      }
-    }
-  ],
-  "lastUpdated": "2024-01-15T10:30:00Z",
-  "version": "1.0.0"
->>>>>>> a9ea279b5294220426ddc220aeba7aa4d10d3d44
 }
