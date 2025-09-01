@@ -396,6 +396,7 @@ function viewProduct(productId) {
     }
     
     console.log('✅ Producto encontrado:', product);
+    console.log('Imagen del producto:', product.image);
     
     // Crear contenido de imágenes
     let imageContent = '';
@@ -439,16 +440,18 @@ function viewProduct(productId) {
         // Imagen de producto WPC
         imageContent = `
             <div class="modal-image">
-                <img src="${product.image}" alt="${product.name}" class="product-modal-image">
+                <img src="${product.image}" alt="${product.name}" class="product-modal-image" style="max-width: 100%; max-height: 400px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
             </div>
         `;
     } else {
         imageContent = `
             <div class="modal-image">
-                <i class="${product.image}"></i>
+                <i class="${product.image}" style="font-size: 4rem; color: var(--primary-color);"></i>
             </div>
         `;
     }
+    
+    console.log('Contenido de imagen generado:', imageContent);
     
     modalBody.innerHTML = `
         <div class="product-modal">
