@@ -164,7 +164,7 @@ function loadProductsFromHTML() {
                 id: 1,
                 name: "Wpc interior nogal con fondo negro",
                 description: "WPC (Wood Plastic Composite) para uso interior con acabado nogal y fondo negro. Material resistente y duradero ideal para revestimientos interiores.",
-                image: "fas fa-home",
+                image: "https://via.placeholder.com/300x200/8B4513/FFFFFF?text=WPC+Interior+Nogal",
                 specifications: {
                     "Tipo": "WPC Interior",
                     "Acabado": "Nogal con fondo negro",
@@ -176,7 +176,7 @@ function loadProductsFromHTML() {
                 id: 2,
                 name: "Wpc interior negro",
                 description: "WPC (Wood Plastic Composite) para uso interior en color negro. Perfecto para revestimientos interiores modernos y elegantes.",
-                image: "fas fa-home",
+                image: "https://via.placeholder.com/300x200/000000/FFFFFF?text=WPC+Interior+Negro",
                 specifications: {
                     "Tipo": "WPC Interior",
                     "Color": "Negro",
@@ -188,7 +188,7 @@ function loadProductsFromHTML() {
                 id: 3,
                 name: "Wpc exterior negro",
                 description: "WPC (Wood Plastic Composite) para uso exterior en color negro. Resistente a la intemperie y perfecto para fachadas y revestimientos exteriores.",
-                image: "fas fa-building",
+                image: "https://via.placeholder.com/300x200/2C2C2C/FFFFFF?text=WPC+Exterior+Negro",
                 specifications: {
                     "Tipo": "WPC Exterior",
                     "Color": "Negro",
@@ -200,7 +200,7 @@ function loadProductsFromHTML() {
                 id: 4,
                 name: "Wpc exterior nogal oscuro",
                 description: "WPC (Wood Plastic Composite) para uso exterior con acabado nogal oscuro. Ideal para fachadas y revestimientos exteriores con apariencia de madera natural.",
-                image: "fas fa-building",
+                image: "https://via.placeholder.com/300x200/654321/FFFFFF?text=WPC+Exterior+Nogal",
                 specifications: {
                     "Tipo": "WPC Exterior",
                     "Acabado": "Nogal oscuro",
