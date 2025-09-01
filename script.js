@@ -1,4 +1,4 @@
-// Array de productos - se cargará desde products.json
+// Array de productos - se cargará desde el HTML
 let products = [];
 
 // Variables globales
@@ -153,63 +153,95 @@ function setupEventListeners() {
     });
 }
 
-// Cargar productos desde products.json
-async function loadProductsFromJSON() {
+// Cargar productos desde el HTML
+function loadProductsFromHTML() {
     try {
-        console.log('Cargando productos desde products.json...');
-        const response = await fetch('products.json');
+        console.log('Cargando productos desde el HTML...');
         
-        if (!response.ok) {
-            throw new Error(`Error HTTP: ${response.status}`);
-        }
+        // Productos WPC definidos directamente
+        products = [
+            {
+                id: 1,
+                name: "Wpc interior nogal con fondo negro",
+                description: "WPC (Wood Plastic Composite) para uso interior con acabado nogal y fondo negro. Material resistente y duradero ideal para revestimientos interiores.",
+                image: "fas fa-home",
+                specifications: {
+                    "Tipo": "WPC Interior",
+                    "Acabado": "Nogal con fondo negro",
+                    "Uso": "Interior",
+                    "Material": "Wood Plastic Composite"
+                }
+            },
+            {
+                id: 2,
+                name: "Wpc interior negro",
+                description: "WPC (Wood Plastic Composite) para uso interior en color negro. Perfecto para revestimientos interiores modernos y elegantes.",
+                image: "fas fa-home",
+                specifications: {
+                    "Tipo": "WPC Interior",
+                    "Color": "Negro",
+                    "Uso": "Interior",
+                    "Material": "Wood Plastic Composite"
+                }
+            },
+            {
+                id: 3,
+                name: "Wpc exterior negro",
+                description: "WPC (Wood Plastic Composite) para uso exterior en color negro. Resistente a la intemperie y perfecto para fachadas y revestimientos exteriores.",
+                image: "fas fa-building",
+                specifications: {
+                    "Tipo": "WPC Exterior",
+                    "Color": "Negro",
+                    "Uso": "Exterior",
+                    "Material": "Wood Plastic Composite"
+                }
+            },
+            {
+                id: 4,
+                name: "Wpc exterior nogal oscuro",
+                description: "WPC (Wood Plastic Composite) para uso exterior con acabado nogal oscuro. Ideal para fachadas y revestimientos exteriores con apariencia de madera natural.",
+                image: "fas fa-building",
+                specifications: {
+                    "Tipo": "WPC Exterior",
+                    "Acabado": "Nogal oscuro",
+                    "Uso": "Exterior",
+                    "Material": "Wood Plastic Composite"
+                }
+            }
+        ];
         
-        const data = await response.json();
-        products = data.products || [];
         filteredProducts = [...products];
         
-        console.log(`Productos cargados exitosamente: ${products.length} productos`);
-        console.log('Última actualización:', data.lastUpdated);
+        console.log(`Productos WPC cargados exitosamente: ${products.length} productos`);
         
         // Guardar en localStorage como backup
         localStorage.setItem('catalogProducts', JSON.stringify(products));
-        localStorage.setItem('catalogLastUpdate', data.lastUpdated);
+        localStorage.setItem('catalogLastUpdate', new Date().toISOString());
         
         return true;
     } catch (error) {
-        console.error('Error cargando productos desde JSON:', error);
-        
-        // Intentar cargar desde localStorage como fallback
-        const savedProducts = localStorage.getItem('catalogProducts');
-        if (savedProducts) {
-            console.log('Cargando productos desde localStorage como fallback...');
-            products = JSON.parse(savedProducts);
-            filteredProducts = [...products];
-            console.log(`Productos cargados desde localStorage: ${products.length} productos`);
-            showNotification('Productos cargados desde caché local', 'info');
-            return true;
-        } else {
-            console.error('No se pudieron cargar productos ni desde JSON ni desde localStorage');
-            showNotification('Error cargando productos. Verifique la conexión.', 'error');
-            return false;
-        }
+        console.error('Error cargando productos desde HTML:', error);
+        showNotification('Error cargando productos WPC.', 'error');
+        return false;
     }
 }
 
 // Inicializar productos
-async function initializeProducts() {
-    console.log('Inicializando productos...');
+function initializeProducts() {
+    console.log('Inicializando productos WPC...');
     
-    const success = await loadProductsFromJSON();
+    const success = loadProductsFromHTML();
     if (success) {
-        renderProducts();
+        // Los productos ya están en el HTML, no necesitamos renderizar
+        console.log('Productos WPC inicializados correctamente');
     } else {
         // Mostrar mensaje de error en la interfaz
         if (productsGrid) {
             productsGrid.innerHTML = `
                 <div class="no-products">
                     <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: #dc3545; margin-bottom: 1rem;"></i>
-                    <h3>Error cargando productos</h3>
-                    <p>No se pudieron cargar los productos. Verifique su conexión a internet.</p>
+                    <h3>Error cargando productos WPC</h3>
+                    <p>No se pudieron cargar los productos WPC.</p>
                     <button class="btn btn-primary" onclick="location.reload()">
                         <i class="fas fa-refresh"></i> Reintentar
                     </button>
@@ -671,16 +703,16 @@ function showNotification(message, type = 'info') {
 }
 
 // Función para recargar productos (útil para actualizaciones)
-async function reloadProducts() {
-    console.log('Recargando productos...');
-    showNotification('Actualizando catálogo...', 'info');
+function reloadProducts() {
+    console.log('Recargando productos WPC...');
+    showNotification('Actualizando catálogo WPC...', 'info');
     
-    const success = await loadProductsFromJSON();
+    const success = loadProductsFromHTML();
     if (success) {
-        renderProducts();
-        showNotification('Catálogo actualizado correctamente', 'success');
+        // Los productos ya están en el HTML, no necesitamos renderizar
+        showNotification('Catálogo WPC actualizado correctamente', 'success');
     } else {
-        showNotification('Error al actualizar el catálogo', 'error');
+        showNotification('Error al actualizar el catálogo WPC', 'error');
     }
 }
 
