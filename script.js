@@ -382,15 +382,20 @@ function handleSearch() {
 
 // Ver producto en modal
 function viewProduct(productId) {
-    console.log('Abriendo modal para producto ID:', productId);
+    console.log('=== ABRIENDO MODAL ===');
+    console.log('Producto ID solicitado:', productId);
+    console.log('Productos disponibles:', products);
+    console.log('productModal elemento:', productModal);
+    console.log('modalBody elemento:', modalBody);
     
     const product = products.find(p => p.id === productId);
     if (!product) {
-        console.error('Producto no encontrado con ID:', productId);
+        console.error('❌ Producto no encontrado con ID:', productId);
+        alert('Producto no encontrado');
         return;
     }
     
-    console.log('Producto encontrado:', product);
+    console.log('✅ Producto encontrado:', product);
     
     // Crear contenido de imágenes
     let imageContent = '';
@@ -405,13 +410,13 @@ function viewProduct(productId) {
                         </div>
                     `).join('')}
                 </div>
-                                        <div class="main-image-container">
-                            <img src="${product.images[0].base64}" alt="${product.name}" id="mainProductImage" class="main-product-image" onclick="openImageZoom()">
-                            <div class="image-info">
-                                <span class="image-name">${product.images[0].name}</span>
-                                <span class="image-counter">1 / ${product.images.length}</span>
-                            </div>
-                        </div>
+                <div class="main-image-container">
+                    <img src="${product.images[0].base64}" alt="${product.name}" id="mainProductImage" class="main-product-image" onclick="openImageZoom()">
+                    <div class="image-info">
+                        <span class="image-name">${product.images[0].name}</span>
+                        <span class="image-counter">1 / ${product.images.length}</span>
+                    </div>
+                </div>
                 ${product.images.length > 1 ? `
                     <div class="image-navigation">
                         <button class="nav-btn prev" onclick="changeImage(-1)">
@@ -428,6 +433,13 @@ function viewProduct(productId) {
         imageContent = `
             <div class="modal-image">
                 <img src="${product.image}" alt="${product.name}" class="product-modal-custom-image">
+            </div>
+        `;
+    } else if (product.image && product.image.startsWith('productos/')) {
+        // Imagen de producto WPC
+        imageContent = `
+            <div class="modal-image">
+                <img src="${product.image}" alt="${product.name}" class="product-modal-image">
             </div>
         `;
     } else {
@@ -473,11 +485,17 @@ function viewProduct(productId) {
     
     console.log('Modal configurado, mostrando...');
     console.log('productModal:', productModal);
+    console.log('modalBody.innerHTML length:', modalBody.innerHTML.length);
     
-    productModal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-    
-    console.log('Modal mostrado correctamente');
+    if (productModal) {
+        productModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        console.log('✅ Modal mostrado correctamente');
+        console.log('Modal display style:', productModal.style.display);
+    } else {
+        console.error('❌ productModal no está disponible');
+        alert('Error: Modal no disponible');
+    }
 }
 
 // Cerrar modal
